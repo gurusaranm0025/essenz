@@ -1,4 +1,5 @@
 import requests
+import textwrap
 import warnings
 from bs4 import BeautifulSoup
 
@@ -53,6 +54,19 @@ def split_text_into_chunks(text: str, max_chunk_size: int = 1000):
         chunks.append(''.join(curr_chunk)+'.')
     
     return chunks
+
+# def format_para(para: str, max_width: int = 80):
+#     wrapped = textwrap.fill(para, width=max_width)
+#     return wrapped
+
+# def format(paragraph: str):
+#     sentences = paragraph.split(".")
+    
+#     sentences = [sentence.strip() for sentence in sentences if sentence.strip()]
+    
+#     formatted_paras = [format_para(sentence) for sentence in sentences]
+    
+#     return '\n\n'.join(formatted_paras)
 
 class Summarizer:
     def __init__(self) -> None:
@@ -162,5 +176,3 @@ if __name__ == "__main__":
     url = "https://www.youtube.com/watch?v=H-orCCxoE8I"
     print("\n YOUTUBE SUMMARY ==>")
     print(summarizer.summarize_youtube_video(url))
-    
-    
