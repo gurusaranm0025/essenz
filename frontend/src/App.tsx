@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
   const [link, setLink] = useState('')
@@ -56,7 +53,7 @@ function App() {
 
       {/* header */}
       <div className='w-full m-0 pl-5 h-20 flex items-center'>
-        <p className='text-3xl font-cesko-regular text-golden-wheat'>essenz</p>
+        <p className='text-2xl montserrat-semibold tracking-wider text-accent-red'>ESSENZ</p>
       </div>
 
       {/* main content */}
@@ -96,8 +93,8 @@ function App() {
 
         {isLoading ? (
           <div className="flex justify-center items-center">
-            <div className="animate-spin rounded-full h-5 w-5 border-t-4 border-golden-wheat"></div>
-            <p className="ml-4 text-md font-poppins-regular text-golden-wheat">Summarizing...</p>
+            <div className="animate-spin rounded-full h-5 w-5 border-t-4 border-greeny-dark-green"></div>
+            <p className="ml-4 text-md font-poppins-regular text-greeny-dark-green">Summarizing...</p>
           </div>
         ) : (
           summary && (
